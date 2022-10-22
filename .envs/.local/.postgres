@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=palindromo
+POSTGRES_USER=ztqmSUjKTLtOqiINblTHWoyUltpiROKO
+POSTGRES_PASSWORD=vyOxyid0szfzajIlWHUA9SY4JVowhPTLMJtMAv3faFiVYZcPubXQI6ZVlrhn373U
