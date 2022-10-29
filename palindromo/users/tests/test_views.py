@@ -11,11 +11,7 @@ from django.urls import reverse
 from palindromo.users.forms import UserAdminChangeForm
 from palindromo.users.models import User
 from palindromo.users.tests.factories import UserFactory
-from palindromo.users.views import (
-    UserRedirectView,
-    UserUpdateView,
-    user_detail_view,
-)
+from palindromo.users.views import UserRedirectView, UserUpdateView, user_detail_view
 
 pytestmark = pytest.mark.django_db
 
