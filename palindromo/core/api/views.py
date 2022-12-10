@@ -15,3 +15,20 @@ class CheckPalindromeAPIView(APIView):
         check_result = check_palindrome(request.GET.get("sentence"))
 
         return Response({"mensagem": check_result})
+
+
+class CounterPalindromeAPIView(APIView):
+    """
+    View responsavel por conta caracteres de um palindromo.
+    """
+
+    permission_classes = []
+
+    def get(self, request, format=None):
+        sentence = request.GET.get("sentence")
+        if not check_palindrome(sentence):
+            return Response({"mensagem": "Frase informada não é um palindromo!"})
+
+        counter = len(sentence)
+
+        return Response({"quantidade": counter})

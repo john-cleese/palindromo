@@ -7,7 +7,7 @@ from django.views.generic import TemplateView
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from rest_framework.authtoken.views import obtain_auth_token
 
-from palindromo.core.api.views import CheckPalindromeAPIView
+from palindromo.core.api.views import CheckPalindromeAPIView, CounterPalindromeAPIView
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
@@ -27,6 +27,7 @@ urlpatterns += [
     # API base url
     path("api/", include("config.api_router")),
     path("api/check/", CheckPalindromeAPIView.as_view(), name="check"),
+    path("api/count/", CounterPalindromeAPIView.as_view(), name="count"),
     # DRF auth token
     path("auth-token/", obtain_auth_token),
     path("api/schema/", SpectacularAPIView.as_view(), name="api-schema"),
